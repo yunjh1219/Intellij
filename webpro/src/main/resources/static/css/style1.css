@@ -1,0 +1,32 @@
+/* 네비게이션바 = 네비바 */
+/* 네비게이션바 위에 상단바(로그인/회원가입) = 상단바 */
+
+
+/* 상단바 */
+.top-nav {
+    background-color: white; /* 상단 메뉴 배경을 하얗게 */
+    color: black; /* 글자색을 검정색으로 설정 */
+    padding: 10px 0; /* 상단 메뉴 패딩 */
+}
+.top-nav a {
+    color: black; /* 링크 색상을 검정색으로 설정 */
+    margin-right: 15px; /* 링크 간격 */
+}
+
+/* 네비바 */
+/* 네비게이션 바 배경색을 하얗게 */
+.navbar {
+    background-color: white; /* 네비게이션 바 배경을 하얗게 */
+    border-color: transparent; /* 경계선을 없애기 */
+}
+
+/* 네비게이션 바의 링크 색상 설정 */
+.navbar .navbar-nav > li > a {
+    color: black; /* 링크 색상을 검정색으로 설정 */
+}
+
+/* 링크에 마우스를 올렸을 때 색상 변경 */
+.navbar .navbar-nav > li > a:hover {
+    color: black; /* 원하는 색상으로 변경 */
+    background-color: white; /* 배경색을 원하는 색상으로 변경 */
+}
