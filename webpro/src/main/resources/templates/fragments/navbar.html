@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="@{/css/welcome.css}">
+</head>
+<body>
+
+<!-- headerFragment 선언 -->
+<div th:fragment="headerFragment">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">웰컴 페이지</a>
+      </div>
+
+      <!-- 오른쪽 메뉴 -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">메티레이저 제모</a></li>
+        <li><a href="#">젠틀맥스프로플러스</a></li>
+        <li><a href="#">시술비용</a></li>
+        <li><a href="#">병원소개</a></li>
+        <li><a href="#">젠맥프플 전문시술의원</a></li>
+        <li><a href="#">예약안내</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+</body>
+</html>

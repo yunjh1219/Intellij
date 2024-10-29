@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thtmeleaf/layout">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <!-- Favicon-->
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<th:block th:replace="fragments/navbar :: headerFragment"></th:block>
+<!-- content fragment 사용 -->
+<th:block layout:fragment="content"></th:block>
+</body>
+</html>

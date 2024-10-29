@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--  <link rel="stylesheet" href="/css/welcome.css"> &lt;!&ndash; 외부 CSS 파일 링크 &ndash;&gt;-->
+  <link rel="stylesheet" th:href="@{/css/welcome.css}">
+  <!--css 적용이 이상함 -->
+  <!--<link rel="stylesheet" href="/css/welcome.css"> 라고하면 실행시 적용되고,
+  미리보기에는 적용이 안돼. 그런데 /static/css/welcome.css라고하면 실행시 적용 안되고, 미리보기에는 적용 -->
+</head>
+
+<body>
+
+<!-- 상단 바 -->
+<!-- 네비게이션 보다 높게 -->
+<div class="top-nav text-right">
+  <a href="#">로그인</a>
+  <a href="#">회원가입</a>
+</div>
+
+<!-- 네비게이션 바 -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">웰컴 페이지</a>
+    </div>
+
+    <!-- 오른쪽 메뉴 -->
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">메티레이저 제모</a></li>
+      <li><a href="#">젠틀맥스프로플러스</a></li>
+      <li><a href="#">시술비용</a></li>
+      <li><a href="#">병원소개</a></li>
+      <li><a href="#">젠맥프플 전문시술의원</a></li>
+      <li><a href="#">게시판</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="content" id="content">
+  <h2>환영합니다!</h2>
+  <p>여기에 초기 내용을 작성하세요.</p>
+</div>
+
+<script>
+  function loadContent(content) {
+    fetch(`/content/${content}`)
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('content').innerHTML = data; // 내용 업데이트
+            })
+            .catch(error => console.error('Error:', error));
+  }
+</script>
+</body>
+</html>
+</body>
+
+</html>
