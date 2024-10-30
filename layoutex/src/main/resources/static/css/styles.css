@@ -1,3 +1,14 @@
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 /* 네비게이션바 = 네비바 */
 /* 네비게이션바 위에 상단바(로그인/회원가입) = 상단바 */
 
@@ -43,6 +54,7 @@
 /* 링크에 마우스를 올렸을 때 링크 색상 변경 */
 .navbar .navbar-nav > li > a:hover {
     color: black; /* 텍스트 색상을 검정색으로 변경 */
+    transform: scaleX(1);
 }
 
 /* hover를 사용하여 글자 아래 밑줄 생기게 */
@@ -57,11 +69,43 @@
 }
 
 /* 링크에 마우스를 올렸을 때 after의 가상요소가 실행됨 */
-.navbar .navbar-nav > li > a:hover:after{
+.navbar .navbar-nav > li > a:hover:after,
+.navbar .navbar-nav > li.active > a:after { /* active 클래스에 대해서도 적용 */
     transform: scaleX(1);
 }
 
-a:focus {
-    color: black; /* 링크가 클릭되었을 때의 색상 (선택 사항) */
-    outline: none; /* 포커스된 링크의 윤곽선을 제거 (선택 사항) */
+
+
+/* 드롭다운 메뉴 숨기기 */
+.dropdown {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute; /* 부모 요소에 상대적으로 위치 */
+    background-color: #333333; /* 드롭다운 배경색 */
+    min-width: 160px; /* 드롭다운 너비 */
+    z-index: 1; /* 다른 요소 위에 나타나게 함 */
+}
+
+/* 드롭다운 항목 스타일 */
+.dropdown li {
+    padding: 10px; /* 드롭다운 항목의 패딩 */
+}
+
+/* 드롭다운 항목 링크 스타일 */
+.dropdown li a {
+    color: darkgray; /* 드롭다운 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.dropdown li a:hover {
+    color: white;
+}
+
+/* 메뉴 항목에 마우스를 올릴 때 드롭다운 표시 */
+.navbar-nav > li:hover .dropdown {
+    display: block; /* 마우스를 올리면 드롭다운 표시 */
+}
+
+/* 드롭다운 항목에 마우스를 올렸을 때 부모 항목의 hover 상태 유지 */
+.navbar .navbar-nav > li:hover > ul.dropdown {
+    display: block; /* 부모 항목에 마우스가 올라가면 드롭다운 표시 */
 }

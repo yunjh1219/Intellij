@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="@{/css/styles.css}">
+<!--  <link rel="stylesheet" href="/static/css/styles.css">-->
+</head>
+<body>
+
+<!-- headerFragment 선언 -->
+<div th:fragment="headerFragment">
+
+  <div class="top-nav text-right">
+    <a href="#">로그인</a>
+    <a href="#">회원가입</a>
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">웰컴 페이지</a>
+      </div>
+
+      <!-- 오른쪽 메뉴 -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/aapage">A:메티레이저 제모</a></li>
+        <li><a href="/bbpage">B:젠틀맥스프로플러스</a></li>
+        <li><a href="/ccpage">C:커뮤니티</a></li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+
+</body>
+</html>

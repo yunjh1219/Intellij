@@ -5,11 +5,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
 public class LayoutController {
 
-    @GetMapping
-    public String main(){
+    @GetMapping("/")
+    public String pmain(){
         return "page/main";
     }
+
+    @GetMapping("apage")
+    public String apage(){ return "page/apage"; }
+
+    @GetMapping("bpage")
+    public String bpage(){ return "page/bpage"; }
+
+    @GetMapping("cpage")
+    public String cpage(){ return "page/cpage"; }
+
+    @GetMapping("cone")
+    public String conepage() {return "droppage/cone"; }
+
 }
